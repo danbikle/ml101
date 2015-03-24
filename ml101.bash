@@ -43,10 +43,15 @@ cd       /tmp/ml101/
 # I should get csv data
 echo ~ann/ml101/wgetem.bash
 
-
-if [ "$HTML" -eq 'yes' ]; then
+if [ "$HTML" == 'yes' ]; then
   # I should get most recent price
-  echo ~ann/ml101/wgethtml.bash
+  ~ann/ml101/wgethtml.bash
+  # I should extract recent prices from html
+  python ~ann/ml101/extprice.py
+  # I should cat prices together
+  echo 'cdate,cp'                            > GSPC3.csv
+  cat GSPCrecent.csv GSPC2.csv|grep -v Date >> GSPC3.csv
+  cat GSPC3.csv                              > GSPC2.csv 
 fi  
 
 
