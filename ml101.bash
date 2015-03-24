@@ -41,7 +41,7 @@ mkdir -p /tmp/ml101/
 cd       /tmp/ml101/
 
 # I should get csv data
-~ann/ml101/wgetem.bash
+echo ~ann/ml101/wgetem.bash
 
 if [ "$HTML" == 'yes' ]; then
   # I should get most recent price
