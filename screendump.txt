@@ -1,0 +1,31 @@
+
+dan@pav /home/ann/ml101 $ 
+dan@pav /home/ann/ml101 $ ./call_ml101.bash 
+./ml101.bash is in the correct folder.
+YRS IS:
+15
+TRAIN_YRS IS:
+10
+HTML IS:
+no
+/home/ann/ml101/wgetem.bash
+hello, from /home/ann/ml101/genf.py
+I am building features from this file:
+GSPC2.csv
+Busy...
+The features are in this file:
+ftrGSPC2.csv
+Now the machine can learn.
+I have this many observations: 16410
+Busy...
+I have saved predictions in prdf1.csv
+I have this many observations: 7590
+Busy...
+I have saved predictions in ff1.csv
+hello, from /home/ann/ml101/plotem.py
+/tmp/ml101/ff1.csv
+New png file: 
+/tmp/ml101/ff1.png
+dan@pav /home/ann/ml101 $ 
+dan@pav /home/ann/ml101 $ 
+dan@pav /home/ann/ml101 $ 
