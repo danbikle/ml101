@@ -7,11 +7,11 @@
 # Demo:
 # YRS=1 ; TRAIN_YRS=10 ; HTML=no ; ~ann/ml101/ml101.bash
 
-if [ -e ~ann/gspc/ ]; then
+if [ -e ~ann/ml101/ ]; then
   echo $0 is in the correct folder.
 else
   echo $0 needs to reside here:
-  echo ~ann/gspc/
+  echo ~ann/ml101/
   echo bye.
   exit 1
 fi
@@ -21,7 +21,7 @@ if [ -z "$YRS" ]; then
 fi  
 
 if [ -z "$TRAIN_YRS" ]; then
-  TRAIN_YRS=10
+  TRAIN_YRS=4
 fi  
 
 if [ -z "$HTML" ]; then
@@ -41,7 +41,7 @@ mkdir -p /tmp/ml101/
 cd       /tmp/ml101/
 
 # I should get csv data
-echo ~ann/ml101/wgetem.bash
+~ann/ml101/wgetem.bash
 
 if [ "$HTML" == 'yes' ]; then
   # I should get most recent price
@@ -55,10 +55,10 @@ if [ "$HTML" == 'yes' ]; then
 fi  
 
 # I should generate features
-python ~ann/gspc/genf.py GSPC2.csv
+python ~ann/ml101/genf.py GSPC2.csv
 # That should give me
 # /tmp/ml101/ftrGSPC2.csv
-
+exit
 # I should train from ftrGSPC2.csv and $TRAIN_YRS
 python ~ann/ml101/ml101.py $TRAIN_YRS
 # That should give me
