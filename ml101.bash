@@ -40,4 +40,16 @@ echo $HTML
 mkdir -p /tmp/ml101/
 cd       /tmp/ml101/
 
+# I should get csv data
+echo ~ann/ml101/wgetem.bash
+
+
+if [ "$HTML" -eq 'yes' ]; then
+  # I should get most recent price
+  echo ~ann/ml101/wgethtml.bash
+fi  
+
+
+
+
 exit
