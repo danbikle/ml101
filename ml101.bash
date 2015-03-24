@@ -69,5 +69,7 @@ python ~ann/ml101/ml101ff.py $TRAIN_YRS $YRS
 # That should give me
 # /tmp/ml101/ff1.csv
 
+# What happened?
+python ~ann/ml101/plotem.py /tmp/ml101/ff1.csv
 
 exit
