@@ -4,6 +4,9 @@
 
 # This script should learn from GSPC observations and then predict.
 
+# Demo:
+# YRS=1 ; TRAIN_YRS=5 ; HTML=no ; ~ann/ml101/ml101.bash
+
 if [ -e ~ann/gspc/ ]; then
   echo $0 is in the correct folder.
 else
@@ -13,20 +16,16 @@ else
   exit 1
 fi
 
-mkdir -p /tmp/ml101/
-cd       /tmp/ml101/
-
-
 if [ -z "$YRS" ]; then
-    export YRS=2
+  YRS=2
 fi  
 
 if [ -z "$TRAIN_YRS" ]; then
-    export TRAIN_YRS=4
+  TRAIN_YRS=4
 fi  
 
 if [ -z "$HTML" ]; then
-    export HTML=no
+  HTML=no
 fi  
 
 echo  YRS IS:
@@ -37,5 +36,8 @@ echo $TRAIN_YRS
 
 echo  HTML IS:
 echo $HTML
+
+mkdir -p /tmp/ml101/
+cd       /tmp/ml101/
 
 exit
