@@ -5,7 +5,7 @@
 # This script should learn from GSPC observations and then predict.
 
 # Demo:
-# YRS=1 ; TRAIN_YRS=5 ; HTML=no ; ~ann/ml101/ml101.bash
+# YRS=1 ; TRAIN_YRS=10 ; HTML=no ; ~ann/ml101/ml101.bash
 
 if [ -e ~ann/gspc/ ]; then
   echo $0 is in the correct folder.
@@ -21,20 +21,20 @@ if [ -z "$YRS" ]; then
 fi  
 
 if [ -z "$TRAIN_YRS" ]; then
-  TRAIN_YRS=4
+  TRAIN_YRS=10
 fi  
 
 if [ -z "$HTML" ]; then
   HTML=no
 fi  
 
-echo  YRS IS:
+echo YRS IS:
 echo $YRS
 
-echo  TRAIN_YRS IS:
+echo TRAIN_YRS IS:
 echo $TRAIN_YRS
 
-echo  HTML IS:
+echo HTML IS:
 echo $HTML
 
 mkdir -p /tmp/ml101/
@@ -66,6 +66,8 @@ python ~ann/ml101/ml101.py $TRAIN_YRS
 
 # Do it Again (Feed-Forward)
 python ~ann/ml101/ml101ff.py $TRAIN_YRS $YRS
+# That should give me
+# /tmp/ml101/ff1.csv
 
 
 exit
