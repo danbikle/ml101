@@ -89,7 +89,7 @@ for oos_i in range(0,pcount):
   pctlead     = wide_a[oos_i,pctlead_i]
   cp          = wide_a[oos_i,cp_i     ]
   lrmodel_plot_data_l.append( [pdate, cp, aprediction-0.5, pctlead] )
-pdb.set_trace()
+
 prdf1 = pd.DataFrame(lrmodel_plot_data_l  )
 prdf1.columns = ['cdate','cp','prediction','actual']
 
