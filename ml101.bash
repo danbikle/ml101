@@ -60,7 +60,7 @@ python ~ann/ml101/genf.py GSPC2.csv
 # /tmp/ml101/ftrGSPC2.csv
 
 # I should train from ftrGSPC2.csv and $TRAIN_YRS
-python ~ann/ml101/ml101.py $TRAIN_YRS
+python ~ann/ml101/ml101.py $TRAIN_YRS $YRS
 # That should give me
 # /tmp/ml101/prdf1.csv
 

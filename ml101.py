@@ -13,19 +13,19 @@ import pandas as pd
 import numpy  as np
 import sys
 
-#  len(sys.argv) should == 2
-if len(sys.argv) < 2:
+#  len(sys.argv) should == 3
+if len(sys.argv) < 3:
   print('Demo:')
   print('cd /tmp/ml101/')
-  print('python ~ann/ml101/ml101.py 4')
+  print('python ~ann/ml101/ml101.py 4 10')
   sys.exit()
 
 train_yrs = int(sys.argv[1])
-yrs       = train_yrs * 2
+yrs       = int(sys.argv[2])
 # I should learn from this many observations:
 train_count = 252 * train_yrs
 # I should calculate  this many predictions:
-pcount      = 252 * (yrs+1)
+pcount      = 252 * yrs
 
 df1 = pd.read_csv('ftrGSPC2.csv')
 

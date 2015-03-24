@@ -70,7 +70,6 @@ rowc = 1
 for elm in presult_l[1:-2]:
   presult2_l.append(presult_l[rowc+0]+presult_l[rowc+1]+presult_l[rowc+2])
   rowc +=1
-pdb.set_trace()
 
 # set len(presult2_l) == len(df5)
 presult2_l.append(0.0)
