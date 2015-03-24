@@ -83,7 +83,7 @@ for oos_i in range(0,pcount):
   yc_train    = y_train > np.mean(y_train)
   pdate       = wide_a[oos_i,cdate_i]
   if (oos_i % dofit == 0) or (oos_i == 0):
-    print('Busy with fit calculations: '+str(oos_i+1))
+    # print('Busy with fit calculations: '+str(oos_i+1))
     lrmodel.fit(x_train, yc_train)
   aprediction = lrmodel.predict_proba(x_oos.astype(float))[0,1]
   pctlead     = wide_a[oos_i,pctlead_i]
