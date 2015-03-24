@@ -33,7 +33,6 @@ pcount      = 252 * yrs
 df1 = pd.read_csv('ftrGSPC2.csv')
 # The data I want to feed-forward should have been created by
 # ml101.py and placed in this file:
-pdb.set_trace()
 df3 = pd.read_csv('prdf1.csv')
 
 # I should match rows from df1 with df3 rows.
@@ -71,6 +70,7 @@ rowc = 1
 for elm in presult_l[1:-2]:
   presult2_l.append(presult_l[rowc+0]+presult_l[rowc+1]+presult_l[rowc+2])
   rowc +=1
+pdb.set_trace()
 
 # set len(presult2_l) == len(df5)
 presult2_l.append(0.0)
