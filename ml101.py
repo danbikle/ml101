@@ -24,8 +24,10 @@ train_yrs = int(sys.argv[1])
 yrs       = int(sys.argv[2])
 # I should learn from this many observations:
 train_count = 252 * train_yrs
+
+# ml101ff.py needs me to double pcount here.
 # I should calculate  this many predictions:
-pcount      = 252 * yrs
+pcount      = 253 * yrs * 2
 
 df1 = pd.read_csv('ftrGSPC2.csv')
 
