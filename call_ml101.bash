@@ -5,10 +5,10 @@
 # This script should call ml101.bash with correct variables.
 
 # This should give me a YRS amount of predictions:
-YRS=10
-
+YRS=15
+# YRS should be >= TRAIN_YRS
 # Each prediction should train from TRAIN_YRS amount of observations:
-TRAIN_YRS=4
+TRAIN_YRS=10
 
 # This should be yes when I want a prediction near calif-noon:55 m-f:
 HTML=no
