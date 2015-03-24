@@ -23,9 +23,12 @@ if len(sys.argv) == 1:
   print('...')
   sys.exit()
 
-print(sys.argv[1])
+infile = sys.argv[1]
+print('I am building features from this file:')
+print(infile)
+print('Busy...')
 
-df1  = pd.read_csv(sys.argv[1])
+df1  = pd.read_csv(infile)
 df1.columns = ['cdate','cp']
 
 cp_a = df1[['cp']].values
@@ -74,6 +77,9 @@ df1['pctlag8'] = pctlag8_a
 # GSPC2.csv
 # I should save my work as something like this:
 # ftrGSPC2.csv
-df1.to_csv('ftr'+sys.argv[1], float_format='%4.3f', index=False)
+df1.to_csv('ftr'+infile, float_format='%4.3f', index=False)
+print('The features are in this file:')
+print('ftr'+infile)
+print('Now the machine can learn.')
 
 # done
