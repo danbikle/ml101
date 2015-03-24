@@ -23,7 +23,6 @@ if len(sys.argv) < 3:
   print('python ~ann/ml101/ml101ff.py 4 1')
   sys.exit()
 
-pdb.set_trace()
 train_yrs = int(sys.argv[1])
 yrs       = int(sys.argv[2])
 # I should learn from this many observations:
@@ -32,7 +31,10 @@ train_count = 252 * train_yrs
 pcount      = 252 * yrs
 
 df1 = pd.read_csv('ftrGSPC2.csv')
-df3 = pd.read_csv('prdf1csv')
+# The data I want to feed-forward should have been created by
+# ml101.py and placed in this file:
+pdb.set_trace()
+df3 = pd.read_csv('prdf1.csv')
 
 # I should match rows from df1 with df3 rows.
 # So I build df5 from df1 and force
