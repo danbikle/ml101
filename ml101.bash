@@ -58,12 +58,12 @@ fi
 python ~ann/ml101/genf.py GSPC2.csv
 # That should give me
 # /tmp/ml101/ftrGSPC2.csv
-exit
+
 # I should train from ftrGSPC2.csv and $TRAIN_YRS
 python ~ann/ml101/ml101.py $TRAIN_YRS
 # That should give me
 # /tmp/ml101/prdf1.csv
-
+exit
 # Do it Again (Feed-Forward)
 python ~ann/ml101/ml101ff.py $TRAIN_YRS $YRS
 # That should give me

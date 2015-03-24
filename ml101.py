@@ -21,7 +21,7 @@ if len(sys.argv) < 2:
   sys.exit()
 
 pdb.set_trace()
-train_yrs = sys.argv[1]
+train_yrs = int(sys.argv[1])
 yrs       = train_yrs * 2
 # I should learn from this many observations:
 train_count = 252 * train_yrs
