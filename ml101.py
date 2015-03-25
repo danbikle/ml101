@@ -54,8 +54,6 @@ gspc5_i   = 4
 gspc6_i   = 5
 gspc7_i   = 6
 
-# I should use plain integers for the remaining 40 columns.
-
 wide_a = np.array(df1)
 x_a    = wide_a[:,gspc4_i: ]
 y_a    = wide_a[:,pctlead_i]
