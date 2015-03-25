@@ -45,7 +45,6 @@ if pcount + train_count > obs_count:
 # I should put it in NumPy Arrays.
 
 # I should declare some integers to help me navigate the Arrays.
-# The layout and names of the columns are specified by joinem.sql:
 
 cdate_i   = 0
 cp_i      = 1
